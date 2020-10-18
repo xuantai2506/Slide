@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    background: url(../images/bg-glow.png) #4E443C;
+    background-repeat: no-repeat;
+}
+#carousel {
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+.carousels {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.carousels > .list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.list-icon .icon {
+    cursor: pointer;
+}
+.list-icon > .dot {
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+.list-icon >.dot a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    height: 10px;
+    width: 10px;
+    line-height: 10px;
+    background: #fff;
+    color: #4E443C;
+    border-radius: 10px;
+    text-indent: -9999px;
+    margin-right: 7px;
+}
+.list-icon >.dot a[class='active']{
+    background: black;
+}
+
+.list-icon > .prev {
+    border: 1px solid black;
+    background: rgb(119, 116, 116);
+    border-radius:50%;
+    padding: 5px 9px;
+    margin-left: 40px;
+}
+.list-icon > .next {
+    border: 1px solid black;
+    background: rgb(119, 116, 116);
+    border-radius:50%;
+    padding: 5px 9px;
+    margin-right: 40px;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+#carousel .list-images {
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow: hidden;
+}
+#carousel .list-images ul {
+    position: relative;
+    width: 20000em;
+}
+#carousel .list-images .images-item {
+    width: 800px;
+    display: list-item;
+    
+    float: left;
+    position: relative;
+}
+#carousel .list-images .images-item[id="active"]{
+    display: list-item;
+    float: left;
+}
+#carousel .list-images img {
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.slide {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.slide > .icon {
+    cursor: pointer;
+    width: 5%;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 25%;
+}
+.slide > .prev {
+    float: left;
+}
+.slide > .next {
+    float: right;
+}
+.list-images {
+    position: relative;
+    float: left;
+    width: 80%;
+    height: 100%;
+    margin-left: 5%;
+    /* background: green; */
+}
+.images-item {
+    display: none;
+}
+.images-item > img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.list-slide {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+.list-slide .list-number {
+    padding: 20px;
+    color: rgb(124, 120, 120);
+    display: inline-block;
+}
+.list-slide .active {
+    color: black;
+    font-weight: 700;
+    font-size: 25x;
+}
