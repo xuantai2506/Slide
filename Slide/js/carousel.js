@@ -19,18 +19,16 @@ $(document).ready(function(){
     }
 
     function nextImages(){
-        let flag = false;
+        let temp = 0 ;
         $(".list-images ul li").animate({
             right : "+=800px",
         },
         {
             complete: function(){
-                if(!flag){
-                    flag=true;
+                temp++;
+                if(temp === LENGTH){
                     let right = parseFloat(listSlide[count].style.right.slice(0,listSlide[count].style.right.length - 2))
                     right+=-(LENGTH)*800;
-                    console.log(right)
-                    console.log(listSlide[count])
                     listSlide[count].style.right = `${right}px`
                     if(count === LENGTH - 1) count=0
                     else count = count + 1 ;
@@ -38,13 +36,7 @@ $(document).ready(function(){
                     $(list_number[count]).addClass('active');
                 }
             }
-        }
-        )
-        // listSlide[count].style.right = `${(LENGTH - 1)*800}px`
-        // if(count === LENGTH - 1) count=0
-        // else count = count + 1 ;
-        // reset();
-        // $(list_number[count]).addClass('active');
+        })
     }
     function setCss(element){
         element.css({
